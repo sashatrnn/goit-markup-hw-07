@@ -65,5 +65,16 @@
 <path d="M32 2.667l-32 15 10.227 3.156 15.773-12.323-11.998 13.488 0.010 0.003-0.012-0.003v7.345l5.735-5.576 7.265 2.242 5-23.333z"></path>
 </symbol>
 
+<symbol id="burger-ico" viewBox="0 0 32 22" fill="none" >
+<g clip-path="url(#clip0_297053_2156)">
+<path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_297053_2156">
+<rect width="32" height="22" fill="white"/>
+</clipPath>
+</defs>
+</symbol>
+
 </defs>
 </svg>
