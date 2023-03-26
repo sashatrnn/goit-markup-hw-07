@@ -139,29 +139,22 @@ ul {
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
-    gap: 120px;
     align-items: center;
     margin: 0 auto
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .nav {
     gap: 76px;
-
   }
-
-    /* .nav {
-      display: flex;
-      align-items: center;
-    } */
-}
+} */
 
 
 
 .logo {
   font-family: "Raleway", sans-serif;
-  padding: 24px 0;
+  /* padding: 24px 0; */
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -176,11 +169,11 @@ ul {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 76px;
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
   .site-nav {
@@ -952,7 +945,7 @@ ul {
 
 .footer-text {
   color: var(--description-color);
-  width: 279px;
+  width: 264px;
   margin-top: 16px;
 }
 
@@ -1139,6 +1132,7 @@ ul {
 
 .backdrop {
   position: fixed;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -1159,8 +1153,8 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 408px;
-  max-height: 596px;
+  /* min-width: 392px; */
+  /* max-height: 596px; */
 
   background-color: var(--modal-bgr);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1170,11 +1164,6 @@ ul {
   transition: transform 250ms linear;
 }
 
-@media screen and (max-width: 400px) {
-  .modal {
-    min-width: 300px;
-  }
-}
 
 .backdrop.is-hidden .modal{
   transform: translate(-50%, -50%) scale(0.6);
@@ -1237,6 +1226,16 @@ ul {
   height: 40px;
   outline: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 430px) {
+  .modal {
+    max-width: 250px;
+  }
+
+  .modal-input {
+    width: 202px;
+  }
 }
 
 textarea{
@@ -1400,6 +1399,9 @@ textarea{
     height: 100%;
     top: 0;
     left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     background-color: var(--primary-white-color);
     padding: 80px 40px 40px 40px;
     display: flex;
@@ -1462,9 +1464,8 @@ textarea{
 
   .mobile-menu.is-open {
     opacity: 1;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(0.7);
+    visibility: visible;
+    pointer-events: inherit;
   }
 
  .active{
@@ -1515,4 +1516,14 @@ textarea{
 
 .menu-list{
   gap: 56px;
+}
+
+@media screen and (max-width: 426px) {
+  .menu-list {
+   gap: 24px;
+  }
+
+  .mobile-menu-contact-phone{
+    font-size: 24px;
+  }
 }
